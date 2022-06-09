@@ -1,7 +1,10 @@
+int gyro_first =3;
+int gyro_second= 4;
+int tilt_sensor=5;
 void setup() {
-  pin.Mode(3,Input)
-  pin.Mode(4,Input)
-  pin.Mode(5,Input)
+  pin.Mode(gyro_first,Input);
+  pin.Mode(gyro_second,Input);
+  pin.Mode(tilt_sensor,Input);
 }
 
 void loop() {
