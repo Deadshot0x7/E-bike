@@ -1,6 +1,8 @@
 
 #include<Wire.h>
 int pinOut = 10;
+int i = 7 ; // Ir Sensor 
+int j=3; // Buzzer
 const int MPU_addr=0x68; int16_t AcX,AcY,AcZ,Tmp,GyX,GyY,GyZ;
 
 int minVal=265; int maxVal=402;
