@@ -2,13 +2,13 @@
 #include<Wire.h>
 int pinOut = 10;
 int i = 7 ; // Ir Sensor 
-int j=3; // Buzzer
+int r=3; // Buzzer
 const int MPU_addr=0x68; int16_t AcX,AcY,AcZ,Tmp,GyX,GyY,GyZ;
 int minVal=265; int maxVal=402;
 double x; 
 void ir_value()
 {
-  int statusSensor = digitalRead (IRSensor);
+  int statusSensor = digitalRead (i);
   
   if (statusSensor == 1 )
   {
@@ -34,8 +34,8 @@ void ir_value()
 
 void setup()
 {
-    pinMode(3,OUTPUT)
-    pinMode(7,OUTPUT)
+    pinMode(3,OUTPUT);
+    pinMode(7,OUTPUT);
      pinMode(10, OUTPUT); 
      Wire.begin(); Wire.beginTransmission(MPU_addr); 
      Wire.write(0x6B); Wire.write(0); 
@@ -64,5 +64,5 @@ else
 {
   digitalWrite(pinOut, HIGH); delay(10);
 }
-ir_value()
+ir_value();
 }
