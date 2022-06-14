@@ -31,8 +31,11 @@ void ir_value()
 
 
 }
+
 void setup()
 {
+    pinMode(3,OUTPUT)
+    pinMode(7,OUTPUT)
      pinMode(10, OUTPUT); 
      Wire.begin(); Wire.beginTransmission(MPU_addr); 
      Wire.write(0x6B); Wire.write(0); 
