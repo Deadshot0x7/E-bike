@@ -12,6 +12,7 @@ void ir_value()
   if (statusSensor==1 || statusSensor=0)
   {
     Serial.println("It's Black or White")
+    delay(10);
     digitalWrite(r,HIGH);
   }
   if (statusSensor == 1 )
