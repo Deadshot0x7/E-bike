@@ -9,7 +9,11 @@ double x;
 void ir_value()
 {
   int statusSensor = digitalRead (i);
-  
+  if (statusSensor==1 || statusSensor=0)
+  {
+    Serial.println("It's Black or White")
+    digitalWrite(r,HIGH);
+  }
   if (statusSensor == 1 )
   {
     Serial.println("it's a Black ");
